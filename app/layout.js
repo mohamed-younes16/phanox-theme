@@ -1,7 +1,7 @@
 
 import { Toaster } from 'react-hot-toast'
 import Cart from './components/Cart'
-import Nav from './components/nav'
+import Nav from './components/Nav'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Checkout from './components/Checkout'

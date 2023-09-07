@@ -5,7 +5,7 @@ import {BsStars} from  'react-icons/bs'
 import { client  } from '@/lib/client'
 
 import dynamic from 'next/dynamic'
-import ProductCard from '@/app/components/product'
+import ProductCard from '@/app/components/Product'
 import ImageSlid from '@/app/components/ImageSlid'
 
 const Toggle = dynamic(()=> import ("@/app/components/Toogle"),{ssr:false})
