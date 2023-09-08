@@ -4,10 +4,15 @@ import Image from "next/image"
 import { storedata } from "../store/store"
 
 import success from "../store/success.svg"
+import { useEffect } from "react"
 
 
 function Page() {
-    storedata.setState({cart:[],total:0})
+    useEffect(() => {
+    storedata.setState({cart:[],total:0,choosed:0})
+    }, [])
+    
+    
 
   return (
     <div className=' h-screen flex flex-col fixed top-0 left-0 items-center justify-center w-screen'>
