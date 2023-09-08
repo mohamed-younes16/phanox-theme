@@ -41,7 +41,7 @@ export  async function POST(req) {
           }
         }),
         billing_address_collection:"required",
-        success_url: `${req.nextUrl.origin}/`,
+        success_url: `${req.nextUrl.origin}/success`,
         cancel_url: `${req.nextUrl.origin}/canceled`,
       } 
 

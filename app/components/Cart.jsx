@@ -11,8 +11,9 @@ import { useRouter } from 'next/navigation';
 
 
 
-const Cart = ({children}) => {
+const Cart = () => {
   const route = useRouter()
+  
 
 
 const cartdata = storedata(s=>s.cart)

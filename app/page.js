@@ -4,10 +4,15 @@ import HeroBanner from "./components/HeroBanner";
 import { client } from "@/lib/client";
 import ProductCard from "./components/Product";
 import FooterBanner from "./components/FooterBanner";
+import { storedata } from "./store/store";
 
 
 
-export default async function Home() {
+export default async function Home({searchParams}) {
+  
+  setTimeout(()=>{
+    storedata.setState({cart:[]})
+  },2000)
   
   const productsdata = await client.fetch('*[_type == "product"]',{},{next:{revalidate:1}})
   const bannersdata = await client.fetch('*[_type == "banner"]',{},{next:{revalidate:2}})
