@@ -16,7 +16,7 @@ const validation = async ({params:{data}}) => {
       
     })
     const response = await res.json()
-    // redirect(response.url)
+    redirect(response.url)
 
 
 }
