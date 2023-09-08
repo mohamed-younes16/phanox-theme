@@ -414,7 +414,7 @@ padding: 30px 65px;
   cursor: pointer;
     transform: scale(1, 1);
   transition:  0.5s ease;
-  box-shadow: -1px 4px 20px 2px #745b89;
+  box-shadow: -1px 4px 10px 2px #745b89;
 }
 .btn:hover:not(.stripe){
   transform: scale(1.1,1.1);
@@ -691,12 +691,13 @@ margin-top: 160px;
     height: 280px;
   }
   .cart-container{
-    width: 415px;
+    width: 350px;
   padding: 4px;
   }
   .cart-heading{
     margin-top: 35px;
   }
+  
   .product-container{
     margin-top: 10px;
   }

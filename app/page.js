@@ -22,7 +22,7 @@ export default async function Home({searchParams}) {
     
         <HeroBanner banner={bannersdata.length > 0 &&  bannersdata[0]}/>
         
-        <div >
+        <div  >
           <div className=" products-heading">
           <h2>
           Best Seller Products

@@ -28,15 +28,15 @@ const deletecart = storedata(s=>s.deletecartitem)
 
 
   return (<>
-    <div  className={`cart-wrapper ${shown ? "translate-x-[150%] ":""}`}>
+    <div  className={`cart-wrapper ${shown ? "translate-x-[110%] ":""}`}>
       
       <div className="cart-container">
         <button className=' cart-heading' onClick={()=>{toggleshown();}}>
-          <AiOutlineLeft/>
+          <AiOutlineLeft className=' text-red-800  text-2xl'/>
           <span> Your Cart</span>
           <span> </span>
         </button>
-          <div className="product-container" suppressHydrationWarning={true}>
+          <div className="product-container " suppressHydrationWarning={true}>
                   {cartdata?.map(e=>(
                     <div key={e._id} className="product">
                       <Image src={urlFor(e.image).url()} 
@@ -45,7 +45,7 @@ const deletecart = storedata(s=>s.deletecartitem)
                       <div className="item-desc">
                         <div className="flex top">
                           <h5 className=' font-bold'>{e.name} </h5>
-                          <h4 className=' font-semibold'>{e.price} </h4>
+                          <h4 className=' font-bold !text-2xl'>${e.price} </h4>
                         </div>
                         <div className="flex bottom ">
                             <div>
@@ -63,7 +63,7 @@ const deletecart = storedata(s=>s.deletecartitem)
                                 style:{background:"black",color:"white",
                                 fontSize:"18px",minWidth:"150px",whiteSpace:"nowrap"}
                               })}}>
-                                <TiDeleteOutline/>
+                                <TiDeleteOutline className=' text-4xl translate-y-3'/>
                               </button>
                           </div>
                       </div>
@@ -71,19 +71,19 @@ const deletecart = storedata(s=>s.deletecartitem)
                     </div>
                   ))}
                 </div>
-              <div className="cart-bottom">
+              <div className="cart-bottom bg-white">
                       <div className="total">
                         <h3 className=' font-semibold'> Subtotal :</h3>
                         <h3 className=' font-bold'> ${total} </h3>
                       </div>
                       
     <div className="btn-container">
-    <button className="btn  animate-bounce
+    <button className="btn  
     transition 
 
 hover:text-violet-700 hover:!bg-white
 
-   stripe !bg-violet-700" onClick={()=>{
+   stripe hover:scale-95 active:scale-90 !bg-violet-700" onClick={()=>{
       if (cartdata.length >0 ) {
         setshow(true)
 
