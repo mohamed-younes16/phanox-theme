@@ -1,12 +1,12 @@
 
 import { redirect } from "next/navigation"
-
+import { headers } from 'next/headers'
 
 
 const validation = async ({params:{data}}) => {
-
-   
-    const res =  await fetch(`http://localhost:3000/api/stripe`,{
+    const he = headers()
+    
+    const res =  await fetch(`https://phanox-theme.vercel.app/api/stripe`,{
       cache:"no-cache",
       method:"POST",
       
@@ -16,7 +16,7 @@ const validation = async ({params:{data}}) => {
       
     })
     const response = await res.json()
-    redirect(response.url)
+    // redirect(response.url)
 
 
 }
