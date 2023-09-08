@@ -413,10 +413,14 @@ padding: 30px 65px;
   color: #fff;
   cursor: pointer;
     transform: scale(1, 1);
-  transition: transform 0.5s ease;
+  transition:  0.5s ease;
+  box-shadow: -1px 4px 20px 2px #745b89;
 }
-.btn:hover{
+.btn:hover:not(.stripe){
   transform: scale(1.1,1.1);
+}
+.stripe:hover{
+  box-shadow: -1px 4px 20px 2px #745b89,inset 0px 0px 5px 2px #1a0038d4;
 }
 .product-detail-container{
   display: flex;

@@ -4,7 +4,7 @@ import Cart from './components/Cart'
 import Nav from './components/Nav'
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Checkout from './components/Checkout'
+
 import Head from 'next/head'
 
 
@@ -34,9 +34,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
       <main className="p-4 !mt-20 overflow-x-hidden main-container">
         <Nav/>
-        <Cart >
-          <Checkout/>
-        </Cart>
+        <Cart />
+          
         <Toaster position='top-center'/>
         
         

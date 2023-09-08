@@ -10,6 +10,7 @@ function Toogle({product}) {
     const  amount = storedata(s=>s.choosed)
     const  handleincrement = storedata(s=>s.setChoosed)
     const addToCart = storedata(s=>s.setCart)
+    const setshow = storedata(s=>s.toggleshown)
     
     
 
@@ -27,13 +28,15 @@ function Toogle({product}) {
 
           </div>
           <div className="buttons">
-            <button className="add-to-cart" onClick={()=>{addToCart(product,amount);toast.success(`added sucessfully ${product.name} `,{
+            <button className="add-to-cart" onClick={()=>{addToCart(product,amount);
+            setshow(false);
+            toast.success(`added sucessfully ${product.name} `,{
               duration:2000,
               icon:"🛒",
               style:{background:"black",color:"white",
               fontSize:"18px",minWidth:"150px",whiteSpace:"nowrap"}
             })}} >ADD To Cart</button>
-            <button className="buy-now max-sm:text-left">Buy Now</button>
+            <button className="buy-now max-sm:text-left" onClick={()=>setshow(false)}>Buy Now</button>
 
           </div>
           </>

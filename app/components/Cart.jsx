@@ -6,11 +6,13 @@ import toast from 'react-hot-toast';
 import { storedata } from '../store/store'
 import Image from 'next/image';
 import { urlFor } from '@/lib/client';
+import { useRouter } from 'next/navigation';
 
 
 
 
 const Cart = ({children}) => {
+  const route = useRouter()
 
 
 const cartdata = storedata(s=>s.cart)
@@ -18,6 +20,7 @@ const toggleshown = storedata(s=>s.setshown)
 const shown = storedata(s=>s.shown)
 const total = storedata(s=>s.total)
 const setcart = storedata(s=>s.setcartmenu)
+const setshow = storedata(s=>s.toggleshown)
 
 const deletecart = storedata(s=>s.deletecartitem)
 
@@ -72,7 +75,21 @@ const deletecart = storedata(s=>s.deletecartitem)
                         <h3 className=' font-semibold'> Subtotal :</h3>
                         <h3 className=' font-bold'> ${total} </h3>
                       </div>
-                      {children}
+                      
+    <div className="btn-container">
+    <button className="btn  animate-bounce
+    transition 
+
+hover:text-violet-700 hover:!bg-white
+
+   stripe !bg-violet-700" onClick={()=>{
+      if (cartdata.length >0 ) {
+        setshow(true)
+
+        route.push(`/validation/${JSON.stringify(cartdata)}`)
+      }
+    }} >Pay With Stripe</button>
+</div>
                       
                     </div>
       </div>

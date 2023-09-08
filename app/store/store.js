@@ -6,6 +6,7 @@ import {persist} from "zustand/middleware"
 const store = (set)=>({
     shown:true,
 setshown:()=>set(s=>({shown:!s.shown})),
+toggleshown:(v)=>set(s=>({shown:v})),
 selected:0,
 setselected:v=> set((s)=> ({selected:v})),
 total:0,
