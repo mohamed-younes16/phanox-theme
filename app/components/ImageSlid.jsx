@@ -1,6 +1,4 @@
 "use client"
-
-import Product from '@/app/components/Product'
 import { urlFor } from '@/lib/client'
 import Image from 'next/image'
 import React from 'react'

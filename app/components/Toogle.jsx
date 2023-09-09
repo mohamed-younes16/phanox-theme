@@ -28,7 +28,7 @@ function Toogle({product}) {
 
           </div>
           <div className="buttons">
-            <button className="add-to-cart" onClick={()=>{addToCart(product,amount);
+            <button className="add-to-cart  shadow-xl active:scale-90 " onClick={()=>{addToCart(product,amount);
             setshow(false);
             toast.success(`added sucessfully ${product.name} `,{
               duration:2000,
@@ -36,7 +36,7 @@ function Toogle({product}) {
               style:{background:"black",color:"white",
               fontSize:"18px",minWidth:"150px",whiteSpace:"nowrap"}
             })}} >ADD To Cart</button>
-            <button className="buy-now max-sm:text-left" onClick={()=>setshow(false)}>Buy Now</button>
+            <button className="buy-now shadow-xl active:scale-90 max-sm:text-left" onClick={()=>setshow(false)}>Buy Now</button>
 
           </div>
           </>

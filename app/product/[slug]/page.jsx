@@ -1,9 +1,6 @@
-
 import React from 'react'
 import {BsStars} from  'react-icons/bs'
-
-import { client  } from '@/lib/client'
-
+import { client } from '@/lib/client'
 import dynamic from 'next/dynamic'
 import ProductCard from '@/app/components/Product'
 import ImageSlid from '@/app/components/ImageSlid'
@@ -13,12 +10,10 @@ const Toggle = dynamic(()=> import ("@/app/components/Toogle"),{ssr:false})
 
 
 const  page = async ({params:{slug}}) => {
-  const productdata = await client.fetch(`*[_type == "product" && slug.current == "${slug}"][0]`,{},{next:{revalidate:1}})
-  const productsdata = await client.fetch(`*[_type == "product"]`,{},{next:{revalidate:1}})
+  const productdata = await client.fetch(`*[_type == "product" && slug.current == "${slug}"][0]`,{},{next:{revalidate:60}})
+  const productsdata = await client.fetch(`*[_type == "product"]`,{},{next:{revalidate:60}})
   const {name,details,price,image} = productdata
   
-
- 
 
   return (
     <>
@@ -28,11 +23,9 @@ const  page = async ({params:{slug}}) => {
           <h1 className=' text-4xl font-bold'>{name} </h1>
           <div className=' reviews'>
             <div className=' flex gap-1 text-2xl'>
-              <BsStars/>
-              <BsStars/>
-              <BsStars/>
-              <BsStars/>
-              <BsStars className=' text-gray-400'/>
+{[...Array(5).keys()].map((e,i)=>  <BsStars key={i} style={{animationDelay:`${i * .250}s `,animationDuration:"1.3s"}} className={ `animate-bounce ${i== 4 ? 'text-gray-400':""}`}/> )}
+              
+              
             </div>
               <p>(20)</p>
 
