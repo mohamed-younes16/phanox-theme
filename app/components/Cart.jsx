@@ -26,7 +26,7 @@ const deletecart = storedata(s=>s.deletecartitem)
 
 
 
-  return (<>
+  return (
     <div  className={`cart-wrapper ${shown ? "translate-x-[110%] ":""}`}>
       
       <div className="cart-container">
@@ -36,7 +36,7 @@ const deletecart = storedata(s=>s.deletecartitem)
           <span> </span>
         </button>
           <div className="product-container " suppressHydrationWarning={true}>
-                  {cartdata?.map(e=>(
+                  {cartdata && cartdata?.map(e=>(
                     <div key={e._id} className="product">
                       <Image src={urlFor(e.image).url()} 
                       width={180} alt='product '
@@ -76,22 +76,22 @@ const deletecart = storedata(s=>s.deletecartitem)
                         <h3 className=' font-bold'> ${total} </h3>
                       </div>
                       
-    <div className="btn-container">
-    <button className="btn  
-    transition 
+                        <div className="btn-container">
+                              <button className="btn  
+                              transition 
 
-hover:text-violet-700 hover:!bg-white
+                          hover:text-violet-700 hover:!bg-white
 
-   stripe hover:scale-95 active:scale-90 !bg-violet-700" onClick={()=>{
-      if (cartdata.length >0 ) {
-        setshow(true)
+                            stripe hover:scale-95 active:scale-90 !bg-violet-700" onClick={()=>{
+                                if (cartdata.length >0 ) {
+                                  setshow(true)
 
-        route.push(`/validation/${JSON.stringify(cartdata)}`)
-      }
-    }} >Pay With Stripe</button>
-</div>
-                      
-                    </div>
+                                  route.push(`/validation/${JSON.stringify(cartdata)}`)
+                                }
+                              }} >Pay With Stripe</button>
+                        </div>
+                                          
+              </div>
       </div>
       
       
@@ -101,7 +101,7 @@ hover:text-violet-700 hover:!bg-white
 
      
       
-    </>
+    
   )
 }
 

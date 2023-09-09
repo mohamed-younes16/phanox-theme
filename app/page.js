@@ -10,8 +10,8 @@ import FooterBanner from "./components/FooterBanner";
 export default async function Home() {
   
   
-  const productsdata = await client.fetch('*[_type == "product"]',{},{next:{revalidate:1}})
-  const bannersdata = await client.fetch('*[_type == "banner"]',{},{next:{revalidate:2}})
+  const productsdata = await client.fetch('*[_type == "product"]',{},{next:{revalidate:60}})
+  const bannersdata = await client.fetch('*[_type == "banner"]',{},{next:{revalidate:60}})
 
   return (
     <>
