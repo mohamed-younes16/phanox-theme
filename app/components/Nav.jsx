@@ -14,7 +14,7 @@ const   Nav = () => {
         <Link href='/' className="logo !text-gray-700">
             PHANOX 
         </Link>
-        <button onClick={()=>toggleshown()} className="relative hover:bg-black p-2 
+        <button aria-label="open cart" onClick={()=>toggleshown()} className="relative hover:bg-black p-2 
         duration-500
         rounded-full  hover:text-white max-md:text-3xl text-5xl ">
             <AiOutlineShoppingCart />

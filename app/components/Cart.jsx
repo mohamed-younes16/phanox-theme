@@ -13,17 +13,16 @@ import { useRouter } from 'next/navigation';
 
 const Cart = () => {
   const route = useRouter()
-  
-
+  const setshow = storedata(s=>s.toggleshown)
 
 const cartdata = storedata(s=>s.cart)
 const toggleshown = storedata(s=>s.setshown)
 const shown = storedata(s=>s.shown)
 const total = storedata(s=>s.total)
 const setcart = storedata(s=>s.setcartmenu)
-const setshow = storedata(s=>s.toggleshown)
 
 const deletecart = storedata(s=>s.deletecartitem)
+
 
 
 
@@ -31,7 +30,7 @@ const deletecart = storedata(s=>s.deletecartitem)
     <div  className={`cart-wrapper ${shown ? "translate-x-[110%] ":""}`}>
       
       <div className="cart-container">
-        <button className=' cart-heading' onClick={()=>{toggleshown();}}>
+        <button aria-label="close cart" className=' cart-heading' onClick={()=>{toggleshown();}}>
           <AiOutlineLeft className=' text-red-800  text-2xl'/>
           <span> Your Cart</span>
           <span> </span>
@@ -44,12 +43,12 @@ const deletecart = storedata(s=>s.deletecartitem)
                       className=' cart-product-image' height={150}/>
                       <div className="item-desc">
                         <div className="flex top">
-                          <h5 className=' font-bold'>{e.name} </h5>
+                          <h3 className='text-xl font-bold'>{e.name} </h3>
                           <h4 className=' font-bold !text-2xl'>${e.price} </h4>
                         </div>
                         <div className="flex bottom ">
                             <div>
-                            <h3>Quantity : </h3>
+                            <h5>Quantity : </h5>
 
                             <p className=' !w-32 mt-2 quantity-desc !p-0  flex items-center'>
                               <span className=' minus ' onClick={()=>setcart(e._id,"dec")}  ><AiOutlineMinus/></span>
@@ -59,10 +58,10 @@ const deletecart = storedata(s=>s.deletecartitem)
 
           
                             </div> 
-                              <button className="remove-item" onClick={()=>{deletecart(e._id);toast.success(`deleted succesfuly ${e.name}`,{
+                              <button aria-label="delete item from cart" className="remove-item" onClick={()=>{deletecart(e._id);toast.success(`deleted succesfuly ${e.name}`,{
                                 style:{background:"black",color:"white",
                                 fontSize:"18px",minWidth:"150px",whiteSpace:"nowrap"}
-                              })}}>
+                                  })}}>
                                 <TiDeleteOutline className=' text-4xl translate-y-3'/>
                               </button>
                           </div>
