@@ -18,7 +18,7 @@ const FooterBanner = ({banner:{discount,largeText1,image,product,midText,smallTe
                 <p>{smallText} </p>
                 <h3>{midText} </h3>
                 <p>Shop now good quality headphones   </p>
-               <Link href={`/product/${product}`}><button type='button'>{buttonText} </button></Link> 
+               <Link href={`/product/${product}`}><button type='button' className=' !text-black'>{buttonText} </button></Link> 
             </div>
         <Image src={urlFor(image).url()} className=' max-[550px]:top-0 max-[550px]:h-40 max-[550px]:w-40 footer-banner-image' alt='headphone' height={400} width={400} />
         </div>
