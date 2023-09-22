@@ -6,7 +6,7 @@ import React from 'react'
 const FooterBanner = ({banner:{discount,largeText1,image,product,midText,smallText,largeText2,saleTime,buttonText}}) => {
 
   return (
-    <div className=' footer-banner-container'>
+    <div className=' footer-banner-container dark:bg-[#4d2222] '>
         <div className="banner-desc">
             <div className="left">
             <p>{discount} </p>
@@ -20,7 +20,7 @@ const FooterBanner = ({banner:{discount,largeText1,image,product,midText,smallTe
                 <p>Shop now good quality headphones   </p>
                <Link href={`/product/${product}`}><button type='button'>{buttonText} </button></Link> 
             </div>
-        <Image src={urlFor(image).url()} className=' footer-banner-image' alt='headphone' height={400} width={400} />
+        <Image src={urlFor(image).url()} className=' max-[550px]:top-0 max-[550px]:h-40 max-[550px]:w-40 footer-banner-image' alt='headphone' height={400} width={400} />
         </div>
         
     </div>

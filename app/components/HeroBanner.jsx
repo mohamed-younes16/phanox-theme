@@ -11,7 +11,7 @@ import { getPlaiceholder } from "plaiceholder";
 const HeroBanner = async ({banner}) => {
 
   return (
-    <div className=' hero-banner-container'>
+    <div className=' hero-banner-container  max-md:bg-left'>
         <div>
             <p className="beats-solo">{banner.smallText}</p>
             <h3 className=' font-bold'>{banner.midText} </h3>

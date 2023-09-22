@@ -19,7 +19,7 @@ export default async function Home() {
         <HeroBanner banner={bannersdata.length > 0 &&  bannersdata[0]}/>
         
         <div  >
-          <div className=" products-heading">
+          <div className=" dark:text-blue-100 products-heading">
           <h2>
           Best Seller Products
           </h2>

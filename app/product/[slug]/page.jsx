@@ -17,7 +17,7 @@ const  page = async ({params:{slug}}) => {
 
   return (
     <>
-    <div className="product-detail-container">
+    <div className="product-detail-container justify-center dark:text-blue-100">
         <ImageSlid image={image}/>
         <div className="product-detail-desc">
           <h1 className=' text-4xl font-bold'>{name} </h1>
@@ -39,7 +39,7 @@ const  page = async ({params:{slug}}) => {
         
     </div>
     <div className="maylike-products-wrapper">
-    <h2>You May Also Like</h2>  
+    <h2 className=' dark:!text-blue-100 '>You May Also Like</h2>  
     <div className="marquee">
       <div className="maylike-products-container track">
           {productsdata?.map(e=><ProductCard key={e._id} prod={e}/>)}

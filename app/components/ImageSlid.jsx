@@ -11,7 +11,7 @@ const ImageSlid = ({image}) => {
 
   return (
     <div>
-    <div className="image-container">
+    <div className="image-container flex justify-center">
       <Image alt='' height={400} width={400 } className=' product-detail-image' src={urlFor(image[selected != null ? selected : 0]).url()}/>
     </div>
     <div className="small-images-container">
