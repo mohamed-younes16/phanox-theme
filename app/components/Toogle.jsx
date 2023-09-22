@@ -18,7 +18,7 @@ function Toogle({product}) {
 
   return (<>
     <div className="quantity">
-            <h3>Quantity : </h3>
+            <p className=' text-lg font-semibold '>Quantity : </p>
 
             <p className=' quantity-desc !p-0  flex items-center'>
               <span className=' minus ' onClick={()=>handleincrement("minus")}><AiOutlineMinus/></span>

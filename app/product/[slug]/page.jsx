@@ -23,7 +23,8 @@ const  page = async ({params:{slug}}) => {
           <h1 className=' text-4xl font-bold'>{name} </h1>
           <div className=' reviews'>
             <div className=' flex gap-1 text-2xl'>
-{[...Array(5).keys()].map((e,i)=>  <BsStars key={i} style={{animationDelay:`${i * .250}s `,animationDuration:"1.3s"}} className={ `animate-bounce ${i== 4 ? 'text-gray-400':""}`}/> )}
+                    {[...Array(5).keys()].map((e,i)=>  <BsStars key={i} style={{animationDelay:`${i * .250}s `,animationDuration:"1.3s"}}
+                    className={ `animate-bounce !bg-yellow-500 ${i== 4 ? 'text-gray-400':""}`}/> )}
               
               
             </div>
