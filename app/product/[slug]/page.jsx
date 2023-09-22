@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 import ProductCard from '@/app/components/Product'
 import ImageSlid from '@/app/components/ImageSlid'
 
-const Toggle = dynamic(()=> import ("@/app/components/Toogle"),{ssr:false})
+import Toggle from  "@/app/components/Toogle"
 
 
 
