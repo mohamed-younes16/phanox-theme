@@ -24,7 +24,7 @@ const  page = async ({params:{slug}}) => {
           <div className=' reviews'>
             <div className=' flex gap-1 text-2xl'>
                     {[...Array(5).keys()].map((e,i)=>  <BsStars key={i} style={{animationDelay:`${i * .250}s `,animationDuration:"1.3s"}}
-                    className={ `animate-bounce !bg-yellow-500 ${i== 4 ? 'text-gray-400':""}`}/> )}
+                    className={ `animate-bounce !text-yellow-500 ${i== 4 ? 'text-gray-400':""}`}/> )}
               
               
             </div>
