@@ -94,7 +94,10 @@ const deletecart = storedata(s=>s.deletecartitem)
                       </div>
                       
                         <div className="btn-container">
-                              <button className="btn  
+                          { cartdata.length > 0 && <button 
+                              
+                              
+                              className="btn  
                               transition 
                               max-sm:w-[60%] mx-auto block
                           hover:text-violet-700 hover:!bg-white
@@ -105,7 +108,8 @@ const deletecart = storedata(s=>s.deletecartitem)
 
                                   route.push(`/validation/${JSON.stringify(cartdata)}`)
                                 }
-                              }} >Pay With Stripe</button>
+                              }} >Pay With Stripe</button>}
+                              
                         </div>
                                           
               </div>
