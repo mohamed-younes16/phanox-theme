@@ -75,7 +75,7 @@ const   Nav = () => {
         <Link href='/' className="logo !text-2xl dark:!text-black !font-normal">
             PHANOX 
         </Link>
-        <button className=' max-sm:text-xl h-12 p-1 pl-2 items-center dark:bg-light-white-500 max-sm:h-9 
+        <button aria-label="toggle theme " className=' max-sm:text-xl h-12 p-1 pl-2 items-center dark:bg-light-white-500 max-sm:h-9 
         bg-[#252531] rounded-full max-sm:min-w-[4.5rem] text-3xl min-w-[6rem] ' onClick={()=>toggleTheme()}> 
             <div style={{translate:dark?"170% 0 ":"0px 0",rotate:dark?"z 360deg":"z 0deg"}}  
             className=' duration-500  w-fit origin-center transition-all '> 

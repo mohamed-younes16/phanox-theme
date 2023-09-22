@@ -30,7 +30,7 @@ const  page = async ({params:{slug}}) => {
               <p>(20)</p>
 
           </div>
-          <h4 className=' font-bold'>Details :</h4>
+          <p className=' font-bold'>Details :</p>
           <p>{details} </p>
           <p className="price">${price} </p>
           <Toggle product={productdata}/>
