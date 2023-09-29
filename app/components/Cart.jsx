@@ -31,7 +31,9 @@ const deletecart = storedata(s=>s.deletecartitem)
     <div  className={`cart-wrapper ${shown ? "translate-x-[110%] ":""}`}>
       
       <div className="cart-container">
-        <button aria-label="close cart" className=' mt-6 cart-heading' onClick={()=>{toggleshown();}}>
+        <button aria-label="close cart" className=' active:!scale-110 transition mt-6 cart-heading' onClick={()=>{setTimeout(() => {
+          toggleshown()
+        }, 150); ;}}>
           <AiOutlineLeft className=' text-red-800  text-2xl'/>
           <span> Your Cart</span>
           <span> </span>

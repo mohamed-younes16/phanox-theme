@@ -13,6 +13,9 @@ export default async function Home() {
   const productsdata = await client.fetch('*[_type == "product"]',{},{next:{revalidate:60}})
   const bannersdata = await client.fetch('*[_type == "banner"]',{},{next:{revalidate:60}})
 
+
+
+
   return (
     <>
     

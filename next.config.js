@@ -3,10 +3,7 @@ const nextConfig = {experimental: {
     serverActions: true,
   },
     images: {
-        domains: [
-            "cdn.sanity.io"
-          
-        ],
+        domains: ["cdn.sanity.io"],
       },
 }
 

@@ -25,17 +25,15 @@ const   Nav = () => {
   
  useEffect(() => {
   const scrolling = ()=>{
-   document.body.style.backgroundPosition = `${((window.scrollY / ( document.documentElement.scrollHeight - window.innerHeight )) * 50 ) + 20}%`
+   document.body.style.backgroundPosition = `${((window.scrollY / ( document.documentElement.scrollHeight - window.innerHeight )) * 50 ) }%`
   }
   window.addEventListener("scroll",scrolling) 
-   
-  console.log("dd")
   return ()=> window.removeEventListener("scroll",scrolling)
   }, [])
 
   useEffect(() => {
 
-   
+  
 
     setDark(() => {
     
