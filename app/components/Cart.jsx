@@ -63,8 +63,9 @@ const deletecart = storedata(s=>s.deletecartitem)
           
                             </div> 
                               <button aria-label="delete item from cart" className="remove-item" 
-                              onClick={()=>{
-                                product.current.classList.add("translate-x-full")
+                              onClick={(ev)=>{
+                                ev.currentTarget.closest(".product").classList.add("translate-x-full")
+                                
                                 setTimeout(() => {
 
                                   deletecart(e._id);
